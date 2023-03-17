@@ -1,1 +1,1 @@
-web: gunicorn objj.wsgi --log-file -
+web: gunicorn objj.wsgi
