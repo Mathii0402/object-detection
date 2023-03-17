@@ -1,0 +1,1 @@
+web: gunicorn objj.wsgi --log-file -
