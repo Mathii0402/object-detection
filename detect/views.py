@@ -25,8 +25,8 @@ def runn(request):
     except: 
         print("hi")
         
-    # if request.method=="GET":
-    #     # return render(request,'home.html')
+    if request.method=="GET":
+        return render(request,'stop.html')
     #     from django.http import HttpResponse
     #     return HttpResponse("stopped")
         # return redirect('/')

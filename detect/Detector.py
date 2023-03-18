@@ -43,7 +43,7 @@ class Detector:
       
         if(cap.isOpened()==False):
             print('ERROR IN OPENING VIDEO')
-            return
+            return render(request,"stop.html")
         
         (success,image)=cap.read()
         
@@ -65,6 +65,7 @@ class Detector:
                 
             try:
                 if len(bboxIdx!=0):
+                   
                     for i in range(0,len(bboxIdx)):
                         bbox=bboxs[np.squeeze(bboxIdx[i])]
                         classConfidence=confidences[np.squeeze(bboxIdx[i])]
@@ -98,7 +99,7 @@ class Detector:
                         cv.line(image,(x+w,y+h),(x+w-linewidth,y+h),classColor,thickness=5)
                         cv.line(image,(x+w,y+h),(x+w,y+h-linewidth),classColor,thickness=5)
     
-                #print(currentTime)
+                        # print(currentTime)
                 else:
                     print("no obj")
                     return render(request,"stop.html")
