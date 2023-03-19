@@ -99,7 +99,7 @@ class Detector:
                         cv.line(image,(x+w,y+h),(x+w-linewidth,y+h),classColor,thickness=5)
                         cv.line(image,(x+w,y+h),(x+w,y+h-linewidth),classColor,thickness=5)
     
-                        # print(currentTime)
+                        print(currentTime)
                 else:
                     print("no obj")
                     return render(request,"stop.html")

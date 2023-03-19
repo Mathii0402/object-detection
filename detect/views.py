@@ -22,6 +22,7 @@ def runn(request):
             
             detector = Detector(videopath,configPath,modelPath,classesPath)
             detector.onVideo(request)
+            return render(request,"stop.html")
     except: 
         print("hi")
         
