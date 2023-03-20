@@ -9,7 +9,7 @@ from django.shortcuts import redirect, render
 
  
 
-
+ 
 def runn(request):
     try:
         if request.method=="POST":
@@ -25,6 +25,7 @@ def runn(request):
             return render(request,"stop.html")
     except: 
         print("hi")
+        return render(request,"stop.html")
         
     if request.method=="GET":
         return render(request,'stop.html')
