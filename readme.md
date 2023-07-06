@@ -9,5 +9,9 @@
 ## Application
     - Very useful for the blind people.
 
+## Colaborators
+    - MATHIANANA M - mathivanan041002@gmail.com
+    - MOSES R - mosesrlj21@gmail.com
+
 ## The app is alive now at [detectMe🔎](https://detectme.pythonanywhere.com/)
     https://detectme.pythonanywhere.com/
