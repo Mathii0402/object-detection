@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from detect.views import formm,runn,stop
+from detect.views import formm,detect_obj,stop
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',formm,name="home"),
-    path("post?",runn,name="runn"),
-    path("runn",runn,name="runn"),
+    path("post?",detect_obj,name="runn"),
+    path("runn",detect_obj,name="runn"),
     path("stop",stop,name='stop')
 
 ]
