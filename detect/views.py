@@ -15,9 +15,9 @@ def detect_obj(request):
         if request.method=="POST":
             # videopath=0
 
-            configPath=os.path.join(r"C:/Users/Mathi\djangopro/ObjectDetection_FlaskDeployment-master/ObjectDetection_FlaskDeployment-master/objj\detect\ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt")
-            modelPath=os.path.join(r"C:/Users/Mathi\djangopro/ObjectDetection_FlaskDeployment-master/ObjectDetection_FlaskDeployment-master/objj\detect/frozen_inference_graph.pb")
-            classesPath=os.path.join(r"C:/Users/Mathi\djangopro/ObjectDetection_FlaskDeployment-master/ObjectDetection_FlaskDeployment-master/objj\detect/coco.names")
+            configPath=os.path.join(r"D:/Moses\s7pro/object-detection-1\detect\ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt")
+            modelPath=os.path.join(r"D:/Moses\s7pro/object-detection-1\detect/frozen_inference_graph.pb")
+            classesPath=os.path.join(r"D:/Moses\s7pro/object-detection-1\detect/coco.names")
 
             
             # detector = Detector(configPath,classesPath,modelPath)
