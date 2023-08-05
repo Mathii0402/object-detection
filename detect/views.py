@@ -6,8 +6,8 @@ from pip import main
 from .Detector import detector
 import os
 from django.shortcuts import redirect, render
-
- 
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
 
  
 def detect_obj(request):
@@ -15,11 +15,11 @@ def detect_obj(request):
         if request.method=="POST":
             # videopath=0
 
-            configPath=os.path.join(r"C:/Users/Mathi\djangopro/ObjectDetection_FlaskDeployment-master/ObjectDetection_FlaskDeployment-master/objj\detect\ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt")
-            modelPath=os.path.join(r"C:/Users/Mathi\djangopro/ObjectDetection_FlaskDeployment-master/ObjectDetection_FlaskDeployment-master/objj\detect/frozen_inference_graph.pb")
-            classesPath=os.path.join(r"C:/Users/Mathi\djangopro/ObjectDetection_FlaskDeployment-master/ObjectDetection_FlaskDeployment-master/objj\detect/coco.names")
+            configPath=os.path.join(BASE_DIR,r"detect\ssd_mobilenet_v3_large_coco_2020_01_14.pbtxt")
+            modelPath=os.path.join(BASE_DIR,r"detect\frozen_inference_graph.pb")
+            classesPath=os.path.join(BASE_DIR,r"detect\coco.names")
 
-            
+            print(BASE_DIR)
             # detector = Detector(configPath,classesPath,modelPath)
             # detector.onVideo(request)
             detector(classesPath,configPath,modelPath)
